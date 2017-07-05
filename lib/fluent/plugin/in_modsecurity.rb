@@ -38,6 +38,9 @@ module Fluent
           delete_parser(path)
         end
       end
+      # immediate: false - true only works at shutdown
+      # unwatched: true for pos file compaction
+      stop_watchers([path], false, true) unless es.empty?
       es
     end
 
