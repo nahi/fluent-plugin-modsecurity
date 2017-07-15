@@ -10,6 +10,7 @@ module Fluent
     # TODO: make format non-required config
     config_param :parser_cleanup_retention_sec, :integer, default: 600
     config_param :parser_cleanup_interval_sec, :integer, default: 300
+    config_param :audit_log_format, :string, default: 'Native'
 
     def initialize
       super
@@ -61,7 +62,7 @@ module Fluent
             v[0] < now - @parser_cleanup_retention_sec
           end
         end
-        @parsers[path] ||= [now, ModsecurityAuditLogParser.new]
+        @parsers[path] ||= [now, ModsecurityAuditLogParser.new(format: @audit_log_format)]
         @parsers[path][1]
       }
     end
