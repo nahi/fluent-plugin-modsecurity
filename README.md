@@ -1,4 +1,4 @@
-# Modsecurity plugin for {Fluentd}[http://github.com/fluent/fluentd]
+# Modsecurity plugin for [fluentd](ttp://github.com/fluent/fluentd)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fluent/plugin/modsecurity`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -6,7 +6,7 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-The gem is hosted at {Rubygems.org}[http://rubygems.org]. You can install the gem as follows:
+The gem is hosted at [rubygems.org](http://rubygems.org). You can install the gem as follows:
 
     $ fluent-gem install fluent-plugin-modsecurity
 
